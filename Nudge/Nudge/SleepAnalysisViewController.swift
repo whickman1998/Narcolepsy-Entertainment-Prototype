@@ -47,8 +47,12 @@ class SleepAnalysisViewController: UIViewController, UIPickerViewDelegate, UIPic
         dataLabel.text = ""
         initSleepChart()
         
-        self.navigationController?.topViewController?.navigationItem.title = "Sleep Data Analysis"
+        //self.navigationController?.topViewController?.navigationItem.title = "Sleep Data Analysis"
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.topViewController?.navigationItem.title = "Sleep Data Analysis"
     }
     
     func findSavedNights() {
